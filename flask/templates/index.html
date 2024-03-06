@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Task Manager {{ app_name }}</h1>
+        <h1 class="text-center mb-4">Task Manager {{ app_name_arg }} vs {{ app_name_env }}</h1>
         <form action="/add" method="POST" class="mb-3">
             <div class="input-group">
                 <input type="text" name="content" id="content" class="form-control" placeholder="Add a new task">

@@ -5,14 +5,15 @@ import os  # Import the os module
 app = Flask(__name__)
 
 # Accessing the APP_NAME environment variable with a default value
-app_name = os.getenv('APP_NAME', 'DefaultAppName')
+app_name_arg = os.getenv('APP_NAME_ARG', 'DefaultAppName1')
+app_name_env = os.getenv('APP_NAME_ENV_COMPOSE', 'DefaultAppName2')
 
 # This will store tasks in memory
 tasks = [{"id": 1, "content": "Learn Flask"}, {"id": 2, "content": "Build a CRUD app"}]
 
 @app.route('/')
 def index():
-    return render_template('index.html', tasks=tasks, app_name=app_name)
+    return render_template('index.html', tasks=tasks, app_name_arg=app_name_arg, app_name_env=app_name_env)
 
 @app.route('/add', methods=['POST'])
 def add_task():

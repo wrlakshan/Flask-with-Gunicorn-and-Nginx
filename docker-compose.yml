@@ -5,11 +5,11 @@ services:
     build: 
       context: ./flask
       args:
-        - APP_NAME=My_Flask_App  # Pass build argument to Dockerfile
+        - APP_NAME_ARG=My_Flask_App_Arg  
     container_name: flask
     restart: always
     environment:
-      - APP_NAME=MyFlaskApp
+      - APP_NAME_ENV_COMPOSE=MyFlaskApp_Compose
     expose:
       - 8080
   nginx:
