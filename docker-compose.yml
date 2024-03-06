@@ -2,7 +2,10 @@ version: "3.7"
 
 services:
   flask:
-    build: ./flask
+    build: 
+      context: ./flask
+      args:
+        - APP_NAME=My_Flask_App  # Pass build argument to Dockerfile
     container_name: flask
     restart: always
     environment:

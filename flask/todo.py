@@ -1,13 +1,18 @@
 from flask import Flask, render_template, request, redirect, url_for
+import os  # Import the os module
+
 
 app = Flask(__name__)
+
+# Accessing the APP_NAME environment variable with a default value
+app_name = os.getenv('APP_NAME', 'DefaultAppName')
 
 # This will store tasks in memory
 tasks = [{"id": 1, "content": "Learn Flask"}, {"id": 2, "content": "Build a CRUD app"}]
 
 @app.route('/')
 def index():
-    return render_template('index.html', tasks=tasks)
+    return render_template('index.html', tasks=tasks, app_name=app_name)
 
 @app.route('/add', methods=['POST'])
 def add_task():
