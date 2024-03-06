@@ -1,11 +1,74 @@
+# README
 
-python3 -m venv env
-source env/bin/activate
-pip install Flask
+This README file provides instructions for setting up and running a Flask application for managing todos.
 
-pip freeze > requirements.txt
-pip install -r requirements.txt
-deactivate
+## Setup Instructions
 
-python3 todo.py
-gunicorn --bind 0.0.0.0:5000 wsgi:app
+1. Create a virtual environment using Python 3:
+
+    ```bash
+    python3 -m venv env
+    ```
+
+2. Activate the virtual environment:
+
+    ```bash
+    source env/bin/activate
+    ```
+
+3. Install Flask using pip:
+
+    ```bash
+    pip install Flask
+    ```
+
+4. Save the installed packages to a requirements file:
+
+    ```bash
+    pip freeze > requirements.txt
+    ```
+
+5. Install the dependencies from the requirements file:
+
+    ```bash
+    pip install -r ToDo/requirements.txt
+    ```
+
+6. Deactivate the virtual environment:
+
+    ```bash
+    deactivate
+    ```
+
+## Running the Application
+
+To run the Flask application, follow these steps:
+
+1. Activate the virtual environment:
+
+    ```bash
+    source env/bin/activate
+    ```
+
+2. Run the application using Python:
+
+    ```bash
+    python3 todo.py
+    ```
+
+    OR
+
+    Run the application using Gunicorn:
+
+    ```bash
+    cd ToDo
+    gunicorn --bind 0.0.0.0:5000 wsgi:app
+    ```
+
+3. Access the application by navigating to `http://localhost:5000` in your web browser.
+
+## Markdown Syntax
+
+For formatting this README file in Markdown, the syntax used follows the standard Markdown format. Markdown is a lightweight markup language with plain-text formatting syntax. You can learn more about Markdown syntax [here](https://www.markdownguide.org/basic-syntax/).
+
+Feel free to customize this README file according to your project's requirements.
