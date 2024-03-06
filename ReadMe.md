@@ -1,7 +1,3 @@
-# README
-
-This README file provides instructions for setting up and running a Flask application for managing todos.
-
 ## Setup Instructions
 
 1. Create a virtual environment using Python 3:
@@ -67,8 +63,4 @@ To run the Flask application, follow these steps:
 
 3. Access the application by navigating to `http://localhost:5000` in your web browser.
 
-## Markdown Syntax
 
-For formatting this README file in Markdown, the syntax used follows the standard Markdown format. Markdown is a lightweight markup language with plain-text formatting syntax. You can learn more about Markdown syntax [here](https://www.markdownguide.org/basic-syntax/).
-
-Feel free to customize this README file according to your project's requirements.
