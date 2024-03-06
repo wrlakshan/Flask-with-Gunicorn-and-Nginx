@@ -63,5 +63,16 @@ To run the Flask application, follow these steps:
 
 3. Access the application by navigating to `http://localhost:5000` in your web browser.
 
+## Running with Docker
 
-docker-compose up -d --build
+To run the application using Docker, you can use docker-compose:
+
+1. Ensure Docker and docker-compose are installed on your system.
+
+2. Build and run the Docker containers:
+
+    ```bash
+    docker-compose up -d --build
+    ```
+
+This will start the Flask application in a Docker container. You can access the application by navigating to `http://localhost:5000` in your web browser.

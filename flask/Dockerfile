@@ -1,9 +1,10 @@
-FROM python:3.7.2-stretch
+FROM python:3.8
 
 WORKDIR /app
 
 ADD . /app
 
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-CMD [ "uwsgi", "app.ini" ]
+CMD ["uwsgi", "app.ini"]
