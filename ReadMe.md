@@ -75,4 +75,4 @@ To run the application using Docker, you can use docker-compose:
     docker-compose up -d --build
     ```
 
-This will start the Flask application in a Docker container. You can access the application by navigating to `http://localhost:5000` in your web browser.
+This will start the Flask application in a Docker container. You can access the application by navigating to `http://127.0.0.1:8084/` in your web browser.
